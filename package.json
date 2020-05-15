@@ -1,0 +1,27 @@
+{
+  "name": "venturus-node-challenge",
+  "version": "1.0.0",
+  "description": "A challenge that Venturus gave me to develop",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiagoDiass/venturus-node-challenge.git"
+  },
+  "author": "Tiago da Costa Dias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiagoDiass/venturus-node-challenge/issues"
+  },
+  "homepage": "https://github.com/TiagoDiass/venturus-node-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.21.1",
+    "sqlite3": "^4.2.0"
+  }
+}
