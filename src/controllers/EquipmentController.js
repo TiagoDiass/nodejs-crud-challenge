@@ -137,7 +137,15 @@ module.exports = {
 
         for (key of keys) {
             if (equipmentToEdit[key] === undefined) {
-                equipmentToEdit[key] = equipment[0][key];
+                
+                // We're doing it because the database saves the booleans as 0 or 1(unless it's equal to null), so we need to convert it
+                // to true or false again, otherwise we'll not be able to update it in the database!
+                if (key === 'wifi' && equipment[0][key] !== null) {
+                    equipmentToEdit[key] = !(!equipment[0][key]);
+                } else {
+                    equipmentToEdit[key] = equipment[0][key];
+                }
+
             }
         }
 
@@ -152,7 +160,6 @@ module.exports = {
             .where({ id: id });
 
         return response.json(equipmentToEdit);
-
     },
 
     async delete (request, response) {
