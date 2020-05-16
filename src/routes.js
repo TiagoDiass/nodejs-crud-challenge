@@ -8,7 +8,7 @@ routes.get('/', (request, response) => {
 
 routes.get('/equipments', EquipmentController.index);
 routes.get('/equipments/:id', EquipmentController.showOne);
-routes.post('/equipments', EquipmentController.create);
+routes.post('/equipments/new', EquipmentController.create);
 routes.put('/equipments/:id', EquipmentController.update);
 routes.delete('/equipments/:id', EquipmentController.delete);
 
