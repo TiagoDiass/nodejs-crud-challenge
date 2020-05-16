@@ -1,5 +1,7 @@
 const connection = require('../database/connection');
 
+// Function that we'll use to validate the data of an equipment before inserting or updating it in the database
+// I recommend that you read it only after reading the create function and the update function
 function validateData (newEquipment) {
     let error = false;
     let errorMsg = '';
@@ -34,8 +36,8 @@ function validateData (newEquipment) {
     }
 }
 
+// Function that we will use to check if there is any equipment in the database with the ID sent to this function
 async function checkIfExists (equipmentId) {
-    
     let exists = undefined;
 
     const equipment = await connection('equipments')
