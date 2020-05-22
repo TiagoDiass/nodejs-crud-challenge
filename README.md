@@ -151,7 +151,7 @@ Caso os dados escolhidos estejam válidos, a resposta será os novos dados do eq
 
 ### <a name="pt-delete"></a>Requisição DELETE: 
 
-Essa é a requisição responsável por deletar um equipamento, o resultado da requisição será um corpo vazio e o status 204(que significa "No content", sem conteúdo), para utilizar a requisição DELETE você deve colocar o ID do paciente na rota como nas imagens abaixo :arrow_heading_down:
+Essa é a requisição responsável por deletar um equipamento, o resultado da requisição será um corpo vazio e o status 204(que significa "No content", sem conteúdo), para utilizar a requisição DELETE você deve colocar o ID do equipamento na rota como nas imagens abaixo :arrow_heading_down:
 
 Caso o ID passado como parâmetro não exista no banco de dados, a resposta será assim:
 
